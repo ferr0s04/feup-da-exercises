@@ -5,16 +5,13 @@ unsigned int integerKnapsack(unsigned int values[], unsigned int weights[], unsi
         return 0;
     }
 
-    // Exclude the last item
     unsigned int excludeLast = integerKnapsack(values, weights, n - 1, maxWeight, usedItems);
 
-    // Include the last item
     unsigned int includeLast = 0;
     if (weights[n - 1] <= maxWeight) {
         includeLast = values[n - 1] + integerKnapsack(values, weights, n - 1, maxWeight - weights[n - 1], usedItems);
     }
 
-    // Choose the maximum value between including and excluding the last item
     if (includeLast > excludeLast) {
         usedItems[n - 1] = true;
         return includeLast;

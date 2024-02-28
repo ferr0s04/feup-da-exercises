@@ -2,10 +2,45 @@
 
 #include <algorithm>
 #include <vector>
+#include <iostream>
+using namespace std;
+
+bool valueSort(const pair<unsigned int, unsigned int> &a, const pair<unsigned int, unsigned int> &b) {
+    return a.first/a.second > b.first/b.second;
+}
 
 double fractionalKnapsack(unsigned int values[], unsigned int weights[], unsigned int n, unsigned int maxWeight, double usedItems[]) {
-    // TODO
-    return 0.0;
+    double weight = 0.0;
+    double value = 0.0;
+    vector<pair<unsigned int,unsigned int>> items;
+
+    for (int i = 0; i < n; i++) {
+        items.push_back(make_pair(values[i],weights[i]));
+    }
+    sort(items.begin(), items.end(), valueSort);
+    int selected = 0;
+    int order = 0;
+    while (weight < maxWeight) {
+        unsigned int weightItem = items[selected].second;
+        if (weightItem + weight <= maxWeight) {
+            usedItems[order] = 1.0;
+            weight += weightItem;
+            value += items[selected].first;
+            order++;
+            selected++;
+        }
+        else {
+            usedItems[order] = (maxWeight - weight)/weightItem;
+            value += items[selected].first * usedItems[order];
+            weight = maxWeight;
+            order++;
+            selected++;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        cout << usedItems[i] << endl;
+    }
+    return value;
 }
 
 /// TESTS ///
