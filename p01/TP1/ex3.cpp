@@ -30,11 +30,25 @@ vector<vector<T>> SCCkosaraju(Graph<T>* g)  {
 // First depth-first search in Kosaraju-Sharir algorithm
 template <typename T>
 void firstDFSKosarajuSharir(Vertex<T> *v, stack<Vertex <T> *> *vertexStack)  {
-    // TODO
+    v->setVisited(true);
+    for (Edge<T> e : v->getAdj()) {
+        auto a = e.getDest();
+        if(!a->isVisited()) {
+            firstDFSKosarajuSharir(a, vertexStack);
+        }
+    }
+    vertexStack->push(v);
 }
 
 // Second depth-first search in Kosaraju-Sharir algorithm
 template <typename T>
 void secondDFSKosarajuSharir(Vertex<T> *v, std::vector<int> & res)  {
-    // TODO
+    v->setVisited(true);
+    res.push_back(v->getInfo());
+    for (Edge<T>& e : v->getAdj()) {
+        auto a = e.getDest();
+        if(!a->isVisited()) {
+            secondDFSKosarajuSharir(a, res);
+        }
+    }
 }

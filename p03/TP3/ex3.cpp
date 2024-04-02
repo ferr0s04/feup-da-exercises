@@ -6,13 +6,43 @@
 
 template <class T>
 void dfsKruskalPath(Vertex<T> *v) {
-    // TODO
+    for (Edge<T>* e : v->getAdj()) {
+        auto n = e->getDest();
+        if (n->getPath() == nullptr) {
+            n->setPath(v);
+            dfsKruskalPath(n);
+        }
+    }
+}
+
+template <class T>
+bool sortEdges(Edge<T>* a, Edge<T>* b) {
+    return a->getWeight() < b->getWeight();
 }
 
 template <class T>
 std::vector<Vertex<T> *> kruskal(Graph<T> *g) {
-    // TODO
-    return g->getVertexSet();
+    std::vector<Vertex<T>*> mst;
+    std::vector<Edge<T>*> edges;
+    for (Vertex<T>* v : g->getVertexSet()) {
+        for (auto e : v->getAdj()) {
+            edges.push_back(e);
+        }
+    }
+    std::sort(edges.begin(), edges.end(), sortEdges<T>);
+    UFDS ufds(g->getNumVertex());
+
+    for (Edge<T>* e : edges) {
+        Vertex<T>* u = e->getOrig();
+        Vertex<T>* v = e->getDest();
+
+        if (ufds.findSet(u->getInfo()) != ufds.findSet(v->getInfo())) {
+            mst.push_back(u);
+            mst.push_back(v);
+            ufds.linkSets(u->getInfo(), v->getInfo());
+        }
+    }
+    return mst;
 }
 
 /// TESTS ///

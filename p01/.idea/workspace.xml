@@ -25,7 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb0ab5f8-0b36-438e-ba0b-c29b30c3e52e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../p03/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP1/ex3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TP1/ex3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p02/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../p02/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p03/TP3/ex1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../p03/TP3/ex1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p03/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../p03/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +69,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/DA_2324_Exs/p02",
+    "last_opened_file_path": "D:/DA_2324_Exs/p03",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,15 +78,16 @@
   }
 }]]></component>
   <component name="RunManager" selected="Google Test.da2324_p01_student">
-    <configuration name="da2324_p01_student" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="da2324_p01_student" TARGET_NAME="da2324_p01_student" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="da2324_p01_student" RUN_TARGET_NAME="da2324_p01_student" TEST_MODE="SUITE_TEST">
+    <configuration name="TP1_Ex1.test_topsort" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" TEST_CLASS="TP1_Ex1" TEST_METHOD="test_topsort" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="da2324_p01_student" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="da2324_p01_student" TARGET_NAME="da2324_p01_student" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="da2324_p01_student" RUN_TARGET_NAME="da2324_p01_student" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="da2324_p01_student" TARGET_NAME="gmock" CONFIG_NAME="Debug">
@@ -110,7 +116,13 @@
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="Google Test.da2324_p01_student" />
+      <item itemvalue="Google Test.TP1_Ex1.test_topsort" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.TP1_Ex1.test_topsort" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,6 +134,8 @@
       <updated>1707906882602</updated>
       <workItem from="1707906886295" duration="5769000" />
       <workItem from="1708511824533" duration="25000" />
+      <workItem from="1709213918891" duration="225000" />
+      <workItem from="1709214214848" duration="817000" />
     </task>
     <servers />
   </component>

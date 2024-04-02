@@ -2,11 +2,18 @@
 // Updated by DA 2023/2024 Team
 
 #include "../data_structures/Graph.h"
+#include "../data_structures/MutablePriorityQueue.h"
 #include "MSTTestAux.h"
 
 template <class T>
 std::vector<Vertex<T> *> prim(Graph<T> * g) {
-    // TODO
+    // Priority queue with all graph vertices
+    MutablePriorityQueue<Vertex<T>> q;
+    for (auto v : g->getVertexSet()) {
+        q.insert(v);
+    }
+
+
     return g->getVertexSet();
 }
 
